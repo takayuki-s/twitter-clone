@@ -7,6 +7,7 @@ import {
 } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
 import React from "react";
+import "./Post.css";
 
 function Post() {
   return (
@@ -17,11 +18,13 @@ function Post() {
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
-            <h3>チュートリアル</h3>
-            <span className="post__headerSpecial">
-              <VerifiedUser className="post__badge" />
-              @teke
-            </span>
+            <h3>
+              プログラミングチュートリアル
+              <span className="post__headerSpecial">
+                <VerifiedUser className="post__badge" />
+                @tekeTECH
+              </span>
+            </h3>
           </div>
           <div className="post__headerDescription">
             <p>Reactなう</p>
