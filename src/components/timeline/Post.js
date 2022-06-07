@@ -9,28 +9,28 @@ import { Avatar } from "@mui/material";
 import React from "react";
 import "./Post.css";
 
-function Post() {
+function Post({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              プログラミングチュートリアル
+              {displayName}
               <span className="post__headerSpecial">
                 <VerifiedUser className="post__badge" />
-                @tekeTECH
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>Reactなう</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src="https://source.unsplash.com/random" />
+        <img src={image} />
         <div className="post__footer">
           <ChatBubbleOutline fontSize="small" />
           <Repeat fontSize="small" />
